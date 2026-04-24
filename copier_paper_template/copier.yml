@@ -1,0 +1,43 @@
+_min_copier_version: "9.0.0"
+
+# Use non-default delimiters to avoid conflicts with LaTeX braces
+_envops:
+  block_start_string: "[%"
+  block_end_string: "%]"
+  comment_start_string: "[#"
+  comment_end_string: "#]"
+  variable_start_string: "[["
+  variable_end_string: "]]"
+
+# ── Questions ──────────────────────────────────────────────────────────────────
+
+project_name:
+  type: str
+  help: "Human-readable project name (e.g., 'My Research Paper')"
+
+project_slug:
+  type: str
+  help: "URL/directory-safe slug (e.g., 'my-research-paper')"
+  default: "[[ project_name | lower | replace(' ', '-') | replace('_', '-') ]]"
+
+author_name:
+  type: str
+  help: "Primary author name"
+
+author_email:
+  type: str
+  help: "Primary author email"
+
+github_username:
+  type: str
+  help: "GitHub username or organization"
+
+description:
+  type: str
+  help: "One-line description of the paper"
+  default: "A scientific journal article"
+
+latex_class:
+  type: str
+  help: "LaTeX document class (e.g., 'article', 'agujournal2019')"
+  default: "article"

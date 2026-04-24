@@ -1,0 +1,19 @@
+# Conda environment for [[ project_name ]]
+#
+# Create:   conda env create -f environment.yaml
+# Activate: conda activate [[ conda_env_name ]]
+# Update:   conda env update -f environment.yaml
+# Remove:   conda deactivate && conda env remove -n [[ conda_env_name ]]
+name: [[ conda_env_name ]]
+channels:
+  - conda-forge
+dependencies:
+  - python=[[ python_version ]]
+  - pip
+  # development tools
+  - ruff
+  - pytest
+  - coverage
+  - ipdb
+  - pip:
+      - -e .

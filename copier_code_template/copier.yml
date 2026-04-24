@@ -1,0 +1,55 @@
+_subdirectory: template
+_templates_suffix: ""
+_envops:
+  block_start_string: "[%"
+  block_end_string: "%]"
+  comment_start_string: "[#"
+  comment_end_string: "#]"
+  variable_start_string: "[["
+  variable_end_string: "]]"
+_tasks:
+  - "python [[ _copier_conf.src_path ]]/.copier-tasks.py validate [[package_name]]"
+
+project_name:
+  type: str
+  help: Human-readable project name (e.g. "My Python Project")
+  default: My Python Project
+
+project_slug:
+  type: str
+  help: Repository/directory name — use hyphens (e.g. "my-python-project")
+  default: "[[project_name|lower|replace(' ', '-')]]"
+
+package_name:
+  type: str
+  help: Python import name — use underscores (e.g. "my_python_project")
+  default: "[[project_slug|replace('-', '_')]]"
+
+author_name:
+  type: str
+  help: Your full name
+  default: Daniel Lassiter
+
+author_email:
+  type: str
+  help: Your email address
+  default: daniel.lassiter@outlook.com
+
+github_username:
+  type: str
+  help: Your GitHub username
+  default: lassiterdc
+
+description:
+  type: str
+  help: One-sentence project description (no trailing period)
+
+python_version:
+  type: str
+  help: Minimum Python version
+  default: "3.11"
+
+conda_env_name:
+  type: str
+  help: Name of the conda environment for this project
+  default: "[[package_name]]"

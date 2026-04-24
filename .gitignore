@@ -1,0 +1,7 @@
+# Local development
+.venv/
+__pycache__/
+*.pyc
+
+# Copier answer files in test output
+.copier-answers.yml.bak
