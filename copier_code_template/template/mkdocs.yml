@@ -30,6 +30,14 @@ plugins:
 
 nav:
   - Home: index.md
-  - Installation: installation.md
-  - Usage: usage.md
-  - API Reference: api.md
+  - Tutorials:
+      - tutorials/index.md
+      - Getting started: tutorials/getting-started.md
+  - How-to guides:
+      - how-to/index.md
+      - Installation: how-to/installation.md
+  - Reference:
+      - reference/index.md
+      - API Reference: reference/api.md
+  - Explanation:
+      - explanation/index.md

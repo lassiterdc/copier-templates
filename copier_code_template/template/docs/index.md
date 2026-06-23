@@ -2,9 +2,10 @@
 
 [[description]].
 
-- [Installation](installation.md)
-- [Usage](usage.md)
-- [API Reference](api.md)
+- [Tutorials](tutorials/index.md) — learning-oriented walkthroughs.
+- [How-to guides](how-to/index.md) — task-oriented recipes (start with [Installation](how-to/installation.md)).
+- [Reference](reference/index.md) — API and technical details.
+- [Explanation](explanation/index.md) — concepts and design rationale.
 
 ## Template update workflow
 
